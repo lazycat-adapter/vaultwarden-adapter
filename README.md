@@ -16,7 +16,7 @@ GitHub Release 发布与应用商店送审是独立任务；Release 失败不会
 
 ## 使用
 
-1. 在本仓库 **Settings → Secrets and variables → Actions → Repository secrets** 配置 `LZC_API_TOKEN`，值为懒猫开发者 PAT。该开发者必须拥有 `cloud.lazycat.app.vaultwarden` 的维护/协作者权限。
+1. 在 `lazycat-adapter` 组织的 Actions secrets 中配置 `LZC_API_TOKEN`，并将本仓库加入该 Secret 的授权范围。该开发者必须拥有 `cloud.lazycat.app.vaultwarden` 的维护/协作者权限。
 2. 仓库 Actions 需要 `contents: write` 权限，以写回版本和状态、发布 Release。
 3. 打开 **Actions → Update Vaultwarden for LazyCat → Run workflow**。
    - 勾选 `dry-run`：仅检查版本及更新日志，不转存、打包或送审。
